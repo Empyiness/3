@@ -1,0 +1,37 @@
+﻿<Window x:Class="_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3"
+        mc:Ignorable="d"
+        Title="3" Height="360" Width="920" ResizeMode="CanMinimize">
+    <Grid> 
+        <Menu Background="#282828" Foreground="White" BorderThickness="0">
+            <MenuItem Header="Файл" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="White" BorderThickness="0">
+                <MenuItem Header="Сгенерировать матрицу" Background="Black" Foreground="White" BorderThickness="0"></MenuItem>
+                <MenuItem Header="Сохранить" Background="Black" Foreground="White" BorderThickness="0"></MenuItem>
+                <MenuItem Header="Открыть" Background="Black" Foreground="White" BorderThickness="0"></MenuItem>
+                <MenuItem Header="Очистить" Background="Black" Foreground="White" BorderThickness="0"></MenuItem>
+                <MenuItem Header="Выход" Background="Black" Foreground="White" BorderThickness="0"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="О программе" Background="Black" Foreground="White"></MenuItem>
+        </Menu>
+        <DataGrid x:Name="DataGridMatrix"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="240,50,0,0" Width="420" Height="150" ColumnHeaderHeight="25" ColumnWidth="103" CanUserResizeColumns="True" CanUserResizeRows="True"/>
+        <Label Content="Количество строк" HorizontalAlignment="Left" Margin="52.5,47.5,0,0" VerticalAlignment="Top" Width="125" Height="30"  Foreground="White"/>
+        <TextBox x:Name="RowBox" HorizontalAlignment="Left" Margin="83.75,75,0,0" VerticalAlignment="Top" TextWrapping="Wrap" Width="62.5" Height="25" Background="Black" Foreground="White"/>
+        <Label Content="Количество столбцов" HorizontalAlignment="Left" Margin="40,97.5,0,0" VerticalAlignment="Top" Width="150" Height="30"  Foreground="White"/>
+        <TextBox x:Name="ColumnBox" HorizontalAlignment="Left" Margin="83.75,125,0,0" VerticalAlignment="Top" TextWrapping="Wrap" Width="62.5" Height="25" Background="Black" Foreground="White"/>
+        <Label Content="Диапазон" HorizontalAlignment="Left" Margin="77.5,147.5,0,0" VerticalAlignment="Top" Width="75" Height="30"  Foreground="White"/>
+        <TextBox x:Name="MinBox" HorizontalAlignment="Left" Margin="40,175,0,0" VerticalAlignment="Top" TextWrapping="Wrap" Width="62.5" Height="25" Background="Black" Foreground="White"/>
+        <TextBox x:Name="MaxBox" HorizontalAlignment="Left" Margin="127.5,175,0,0" VerticalAlignment="Top" TextWrapping="Wrap" Width="62.5" Height="25" Background="Black" Foreground="White"/>
+        <Button Content="Сгенерировать матрицу" HorizontalAlignment="Left" Margin="30,225,0,0" VerticalAlignment="Top" Width="170" Height="25" Background="Black" Foreground="White" Click="Generate"/>
+        <Label Content="Сумма элементов > 15" HorizontalAlignment="Left" Margin="370,222.5,0,0" VerticalAlignment="Top" Width="160" Height="30"  Foreground="White"/>
+        <TextBox x:Name="SumBox" HorizontalAlignment="Left" Margin="370,250,0,0" VerticalAlignment="Top" TextWrapping="Wrap" Width="160" Height="25" Background="Black" Foreground="White" IsReadOnly="True"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="710,50,0,0" VerticalAlignment="Top" Width="150" Height="25" Background="Black" Foreground="White" Click="Save"/>
+        <Button Content="Открыть" HorizontalAlignment="Left" Margin="710,100,0,0" VerticalAlignment="Top" Width="150" Height="25" Background="Black" Foreground="White" Click="Open"/>
+        <Button Content="Очистить" HorizontalAlignment="Left" Margin="710,150,0,0" VerticalAlignment="Top" Width="150" Height="25" Background="Black" Foreground="White" Click="Clear"/>
+        <Button Content="О программе" HorizontalAlignment="Left" Margin="710,200,0,0" VerticalAlignment="Top" Width="150" Height="25" Background="Black" Foreground="White" Click="About"/>
+        <Button Content="Выход" HorizontalAlignment="Left" Margin="710,250,0,0" VerticalAlignment="Top" Width="150" Height="25" Background="Black" Foreground="White" Click="Close"/>
+    </Grid>
+</Window>
